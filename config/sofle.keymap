@@ -6,7 +6,7 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1100  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
-#define ZMK_MOUSE_SCRL_VAL 25
+#define ZMK_MOUSE_SCRL_VAL 72
 
 #include "keys_us_international.h"
 #include <behaviors.dtsi>
