@@ -116,6 +116,7 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             label = "SCROLL_UP_DOWN";
+            tap-ms = <20>;
         };
 
         key_tap_hold_layer_toggle: key_tap_hold_layer_toggle {
