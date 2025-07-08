@@ -283,11 +283,11 @@
         game1 {
             display-name = "Game 1";
             bindings = <
-&gresc        &kp EN_COMMA  &kp EN_PERIOD         &kp EN_SLASH  &kp EN_MINUS                 &kp EQUAL                                                     &mt C_POWER C_AL_LOCK  &kp C_PREVIOUS           &kp C_PP      &kp C_NEXT            &kp MINUS    &kp EQUAL
-&kp TAB       &kp EN_Q      &kp EN_W              &kp EN_F      &kp EN_P                     &kp EN_G                                                      &kp EN_J               &kp EN_L                 &kp EN_U      &kp EN_Y              &kp EN_SEMI  &kp EN_BSLH
-&caps_word    &kp EN_A      &kp EN_R              &kp EN_S      &kp EN_T                     &kp EN_D                                                      &kp EN_H               &kp EN_N                 &kp EN_E      &kp EN_I              &kp EN_O     &kp EN_SINGLE_QUOTE
-&kp LEFT_ALT  &kp EN_Z      &kp EN_X              &kp EN_C      &kp EN_V                     &kp EN_B     &kp C_MUTE            &tog 2                     &kp EN_K               &kp EN_M                 &kp EN_COMMA  &kp EN_DOT            &kp EN_FSLH  &kp RIGHT_ALT
-                            &kp LS(LEFT_CONTROL)  &kp LEFT_GUI  &mt LEFT_CONTROL UNDERSCORE  &lt 7 SPACE  &mt LEFT_SHIFT ESC    &mt RIGHT_SHIFT BACKSPACE  &lt 4 ENTER            &mt RIGHT_CONTROL MINUS  &kp LEFT_GUI  &kp LS(LEFT_CONTROL)
+&gresc          &kp EN_COMMA  &kp EN_PERIOD  &kp EN_SLASH  &kp EN_MINUS                 &kp EQUAL                                             &mt C_POWER C_AL_LOCK  &kp C_PREVIOUS           &kp C_PP      &kp C_NEXT            &kp MINUS    &kp EQUAL
+&kp TAB         &kp EN_Q      &kp EN_W       &kp EN_F      &kp EN_P                     &kp EN_G                                              &kp EN_J               &kp EN_L                 &kp EN_U      &kp EN_Y              &kp EN_SEMI  &kp EN_BSLH
+&caps_word      &kp EN_A      &kp EN_R       &kp EN_S      &kp EN_T                     &kp EN_D                                              &kp EN_H               &kp EN_N                 &kp EN_E      &kp EN_I              &kp EN_O     &kp EN_SINGLE_QUOTE
+&kp LEFT_SHIFT  &kp EN_Z      &kp EN_X       &kp EN_C      &kp EN_V                     &kp EN_B     &kp C_MUTE    &tog 2                     &kp EN_K               &kp EN_M                 &kp EN_COMMA  &kp EN_DOT            &kp EN_FSLH  &kp RIGHT_ALT
+                              &kp LEFT_ALT   &kp LEFT_GUI  &mt LEFT_CONTROL UNDERSCORE  &lt 7 SPACE  &lt 8 ESC     &mt RIGHT_SHIFT BACKSPACE  &lt 4 ENTER            &mt RIGHT_CONTROL MINUS  &kp LEFT_GUI  &kp LS(LEFT_CONTROL)
             >;
 
             sensor-bindings =
@@ -299,11 +299,26 @@
         game2 {
             label = "Game 2";
             bindings = <
-&kp EN_N1  &kp EN_N2  &kp F1     &kp F2     &kp F3    &kp F4                      &trans  &trans  &trans  &trans  &trans  &trans
-&kp EN_N3  &kp EN_N4  &kp EN_Y   &kp EN_U   &kp EN_L  &kp EN_J                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp EN_N5  &kp EN_N6  &kp EN_I   &kp EN_E   &kp EN_N  &kp EN_H                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp EN_N7  &kp EN_N8  &kp EN_N9  &kp EN_N0  &kp EN_M  &kp EN_K  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans     &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&kp F1            &kp F2        &kp F3      &kp F4        &kp F5    &kp F6                      &trans  &trans  &trans  &trans  &trans  &trans
+&kp EN_BACKSLASH  &kp EN_SEMI   &kp EN_Y    &kp EN_U      &kp EN_L  &kp EN_J                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp EN_SQT        &kp EN_O      &kp EN_I    &kp EN_E      &kp EN_N  &kp EN_H                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &kp EN_SLASH  &kp EN_DOT  &kp EN_COMMA  &kp EN_M  &kp EN_K  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans      &trans        &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&scroll_up_down>;
+        };
+
+        game3 {
+            label = "Game 3";
+            bindings = <
+&kp F1            &kp F2        &kp F3     &kp F4     &kp F5     &kp F6                      &trans  &trans  &trans  &trans  &trans  &trans
+&kp EN_BACKSLASH  &kp EN_SEMI   &kp EN_N9  &kp EN_N8  &kp EN_N7  &kp EN_J                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp EN_SQT        &kp EN_N0     &kp EN_N6  &kp EN_N5  &kp EN_N4  &kp EN_H                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans            &kp EN_SLASH  &kp N3     &kp EN_N2  &kp EN_N1  &kp EN_K  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans     &trans     &trans     &trans    &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
