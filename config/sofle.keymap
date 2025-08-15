@@ -214,7 +214,7 @@
 &trans  &kp SLASH       &kp ASTERISK     &kp MINUS             &kp PLUS               &kp PERCENT                    &kp EXCLAMATION     &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &kp F12
 &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN                    &kp EQUAL           &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PIPE       &kp LCTRL
 &trans  &kp HASH        &kp TILDE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPS     &trans    &trans  &mt EN_EURO DOLLAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD     &trans
-                        &trans           &trans                &trans                 &trans       &trans    &trans  &kp SPACE           &kp N0        &trans        &trans
+                        &trans           &trans                &trans                 &trans       &trans    &trans  &lt 4 SPACE         &kp N0        &trans        &trans
             >;
 
             sensor-bindings =
