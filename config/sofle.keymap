@@ -51,16 +51,6 @@
     combos {
         compatible = "zmk,combos";
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
-        };
-
-        delete_right {
-            bindings = <&kp DELETE>;
-            key-positions = <46 47>;
-        };
-
         toggle_symbols {
             bindings = <&tog 3>;
             key-positions = <14 15 16>;
@@ -76,16 +66,6 @@
             key-positions = <36 49>;
         };
 
-        backspace_left {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <15 14>;
-        };
-
-        delete_left {
-            bindings = <&kp DELETE>;
-            key-positions = <38 39>;
-        };
-
         capslock {
             bindings = <&kp CAPS>;
             key-positions = <54 55>;
@@ -94,6 +74,11 @@
         toggle_game_layer {
             bindings = <&tog 6>;
             key-positions = <13 17>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <55 59>;
         };
     };
 
@@ -176,7 +161,7 @@
             >;
 
             sensor-bindings =
-                <&scroll_left_right>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
                 <&scroll_up_down>,
                 <&inc_dec_kp PG_UP PG_DN>;
         };
@@ -197,19 +182,19 @@
             label = "Fin";
         };
 
-        rotary_arrows {
-            display-name = "Rot arr";
+        rotary_scroll {
+            display-name = "Rot scroll";
             bindings = <
-&gresc        &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp LC(K)     &kp K_CONTEXT_MENU           &kp PRINTSCREEN                                                   &mt C_POWER C_AL_LOCK  &kp C_PREVIOUS           &kp C_PP      &kp C_NEXT            &kp MINUS    &kp EQUAL
-&kp TAB       &trans         &trans                &trans        &trans                       &trans                                                            &trans                 &trans                   &trans        &trans                &kp EN_SEMI  &kp EN_BSLH
-&caps_word    &trans         &trans                &trans        &trans                       &trans                                                            &trans                 &trans                   &trans        &trans                &trans       &kp EN_SINGLE_QUOTE
-&kp LEFT_ALT  &trans         &trans                &trans        &trans                       &trans           &kp C_MUTE            &tog 2                     &trans                 &trans                   &kp EN_COMMA  &kp EN_DOT            &kp EN_FSLH  &kp RIGHT_ALT
-                             &kp LS(LEFT_CONTROL)  &kp LEFT_GUI  &mt LEFT_CONTROL UNDERSCORE  &lt 3 SPACE      &mt LEFT_SHIFT ESC    &mt RIGHT_SHIFT BACKSPACE  &lt 4 ENTER            &mt RIGHT_CONTROL MINUS  &kp LEFT_GUI  &kp LS(LEFT_CONTROL)
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &kp EN_SEMI  &kp EN_BSLH
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans       &kp EN_SINGLE_QUOTE
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans       &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
-                <&inc_dec_kp RIGHT LEFT>,
-                <&inc_dec_kp DOWN UP>,
+                <&scroll_left_right>,
+                <&scroll_up_down>,
                 <&inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -229,12 +214,12 @@
 &trans  &kp SLASH       &kp ASTERISK     &kp MINUS             &kp PLUS               &kp PERCENT                    &kp EXCLAMATION     &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &kp F12
 &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN                    &kp EQUAL           &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PIPE       &kp LCTRL
 &trans  &kp HASH        &kp TILDE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AMPS     &trans    &trans  &mt EN_EURO DOLLAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD     &trans
-                        &trans           &trans                &trans                 &trans       &trans    &trans  &trans              &kp N0        &kp SPACE     &trans
+                        &trans           &trans                &trans                 &trans       &trans    &trans  &kp SPACE           &kp N0        &trans        &trans
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>,
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+                <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         nav_layer {
@@ -273,7 +258,7 @@
 &bt BT_CLR_ALL     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none           &none           &none         &none            &none
 &ext_power EP_TOG  &none         &none         &none         &none         &studio_unlock                  &none  &msc SCRL_DOWN  &none           &none         &none            &none
 &none              &none         &mkp RCLK     &mkp MCLK     &mkp LCLK     &none                           &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none              &none         &none         &none         &none         &none           &none    &none  &none  &msc SCRL_UP    &none           &none         &none            &none
+&none              &none         &none         &none         &none         &none           &none    &none  &none  &msc SCRL_UP    &kp COMMA       &kp DOT       &none            &none
                                  &none         &none         &none         &none           &none    &none  &none  &none           &none           &none
             >;
 
